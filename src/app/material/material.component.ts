@@ -25,6 +25,7 @@ export class MaterialComponent implements OnInit {
     if (this.UserLoggedIn) {
       console.log("User Logged Out")
       this.commonsrv.UpdateUserLog(null);
+      this.commonsrv.ShowMessage("Logged Out successfully", 3000);
       this.route.navigate(['/login']);
     }
 
