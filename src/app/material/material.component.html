@@ -1,0 +1,22 @@
+<!--Header-->
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button> 
+    <span>My App</span>
+    <span class="example-spacer"></span>
+  <div *ngIf="!UserLoggedIn;else logout">
+    <button mat-raised-button (click)="RouteToLogin()">Sign In</button>&nbsp;
+    <button mat-raised-button (click)="RouteToRegister()">Register</button>
+  </div>
+  </mat-toolbar>
+
+ <ng-template #logout>
+<button mat-raised-button (click)="Logout()">Logout</button>
+ </ng-template>
+
+ <div class="userlogout" *ngIf="UserLoggedIn">
+  <h1>Welcome {{UserLoggedIn.FirstName}}!!!</h1>
+</div>
+  
+  

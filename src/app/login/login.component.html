@@ -1,0 +1,22 @@
+<mat-card class="form">
+  <mat-card-title>Sign In</mat-card-title>
+  <br>
+<form  class="example-form">
+  <div [formGroup]="LoginForm">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Enter your email</mat-label>
+    <input matInput  formControlName="Email" required>
+    <mat-icon matSuffix>account_box</mat-icon>
+  </mat-form-field> 
+<br>
+<mat-form-field class="example-full-width" appearance="fill">
+  <mat-label>Enter your password</mat-label>
+  <input matInput type="password" formControlName="Password"required>
+  <mat-icon matSuffix>lock</mat-icon>
+</mat-form-field>
+</div>
+<button mat-raised-button color="primary" [disabled]='LoginForm?.invalid' (click)="Login()">Sign In</button>&nbsp;
+<button mat-raised-button color="primary" (click)="RouteToRegister()">Register</button>
+
+</form>
+</mat-card> 

@@ -1,0 +1,57 @@
+
+<mat-card class="register">
+    <mat-card-title>User Registeration</mat-card-title>
+    <br>
+    <form class="example-form">
+    <div [formGroup]="RegisterForm">
+      <table class="example-full-width" cellspacing="0"><tr>
+       <td><mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>FirstName</mat-label>
+          <input matInput formControlName="FirstName" >
+        </mat-form-field></td>
+        <td><mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>LastName</mat-label>
+          <input matInput formControlName="LastName">
+        </mat-form-field></td>
+      </tr></table>
+        
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Email Address</mat-label>
+            <input matInput formControlName="Email">
+          </mat-form-field>
+          
+        <table class="example-full-width" cellspacing="0"><tr>
+          <td><mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" formControlName="Password" >
+          </mat-form-field></td>
+          <td><mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Confirm Password</mat-label>
+            <input matInput type="password" formControlName="ConfirmPassword">
+          </mat-form-field></td>
+        </tr></table>
+          
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Phone Number</mat-label>
+            <input matInput formControlName="Phone">
+          </mat-form-field>
+          
+        <table class="example-full-width" cellspacing="0"><tr>
+          <td><mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Address</mat-label>
+            <input matInput formControlName="Address">
+          </mat-form-field></td>
+          <td><mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Pincode</mat-label>
+            <input matInput formControlName="Pincode">
+          </mat-form-field></td>
+        </tr></table>
+        </div> 
+        <button mat-raised-button color="primary" [disabled]='RegisterForm?.invalid' (click)="Register()">Register</button>&nbsp;
+      <button mat-raised-button color="primary" (click)="BackToMain()">Back</button>
+      </form>
+    
+
+    </mat-card>
+
+  
