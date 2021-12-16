@@ -26,7 +26,6 @@ export class CommonService {
     return true;
  }
  UserPresent(email){
-   console.log(email);
    return this.UserData.find(u =>u.Email===email);
  }
  CheckPassword(email, password){
